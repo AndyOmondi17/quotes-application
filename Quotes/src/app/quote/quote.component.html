@@ -5,14 +5,14 @@
         <div class="col-md-6">
             <div *ngFor='let quote of quotes'>
                 <h4>{{quote.Name}}</h4>
-                <app-quote-details [quote]='quote' (isDelete)="deleteQuote($event,i)" ></app-quote-details>
+                <app-quote-details [quote]='quote' (isDelete)="deleteQuote($event,i)"></app-quote-details>
                 
                 
             </div>
             
         </div>
-        <div class="col-md-12">
-            
+        <div class="col-md-6">
+            <app-quote-form></app-quote-form>
         </div>
     </div>
 </div>
