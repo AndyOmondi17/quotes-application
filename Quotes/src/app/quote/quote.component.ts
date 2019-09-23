@@ -23,14 +23,20 @@ export class QuoteComponent implements OnInit {
   }
   
 
+  showDetails(index){
+    this.quotes[index].showDetails = !this.quotes[index].showDetails;
+  }
+
   deleteQuote(isDelete, index){
     if(isDelete){
-      this.quotes.splice(index,1);
 
-     
+      let toDelete=confirm(`Are you sure you want to delete ${this.quotes[index].Name} this quote?`);
+
+      if(toDelete){
+        this.quotes.splice(index,1);
+      }
       
     }
-
   }
 
 

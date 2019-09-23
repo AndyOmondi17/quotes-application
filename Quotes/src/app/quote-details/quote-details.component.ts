@@ -9,9 +9,11 @@ import {Quote}from "../quote";
 export class QuoteDetailsComponent implements OnInit {
   @Input () quote:Quote;
   @Output() isDelete=new EventEmitter<boolean>();
+  
   quoteDelete(Delete:boolean){
     this.isDelete.emit(Delete);
   }
+  
   constructor() { }
 
   ngOnInit() {
