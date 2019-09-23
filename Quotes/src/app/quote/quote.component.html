@@ -5,9 +5,7 @@
         <div class="col-md-6">
             <div *ngFor='let quote of quotes'>
                 <h4>{{quote.Name}}</h4>
-                <p>{{quote.author}}</p>
-                <p>{{quote.submittedBy}}</p>
-                <p>{{quote.dateCreation}}</p>
+                <app-quote-details [quote]='quote'></app-quote-details>
                 
             </div>
             
