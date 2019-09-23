@@ -15,6 +15,14 @@ export class QuoteComponent implements OnInit {
     new Quote(5,"The successful warrior is the average man, with laser-like focus","Theodore Rosevelte","Andy Omondi",new Date(2019,0,16)),
 
   ];
+  addNewQuote(quote){
+    let quoteLength = this.quotes.length;
+    quote.id = quoteLength+1;
+    quote.dateCreation = new Date(quote.dateCreation);
+    this.quotes.push(quote);
+  }
+  
+
   deleteQuote(isDelete, index){
     if(isDelete){
       this.quotes.splice(index,1);
