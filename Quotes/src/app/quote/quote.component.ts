@@ -15,11 +15,17 @@ export class QuoteComponent implements OnInit {
     new Quote(5,"The successful warrior is the average man, with laser-like focus","Theodore Rosevelte","Andy Omondi",new Date(2019,0,16)),
 
   ];
+  deleteQuote(isDelete, index){
+    if(isDelete){
+        this.quotes.splice(index,1);
+      }
+
+  }
 
 
   constructor() { }
 
   ngOnInit() {
   }
-
+  
 }

@@ -1,6 +1,8 @@
 <div>
     <p>The author of the quote is {{quote.author}}</p>
-    <p>The quote was submitted by {{ quote.submittedBy }} and was created on {{quote.dateCreation|dateCount}}</p>
+    <p>The quote was submitted by {{ quote.submittedBy }} and was created on {{quote.dateCreation|date}}</p>
     <button (click)="quote.upvotes=quote.upvotes+1">upvotes {{quote.upvotes}}</button>
     <button (click)="quote.downvotes=quote.downvotes+1">downvotes {{quote.downvotes}}</button>
+    <br><br>
+    <button (click)= "quoteDelete(true)">Delete</button>
 </div>
