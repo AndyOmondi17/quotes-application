@@ -21,6 +21,9 @@ export class QuoteComponent implements OnInit {
     quote.dateCreation = new Date(quote.dateCreation);
     this.quotes.push(quote);
   }
+  toggleDetails(index){
+    this.quotes[index].showDetails = !this.quotes[index].showDetails ;
+  }
   
 
   showDetails(index){
